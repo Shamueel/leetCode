@@ -1,12 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        ans = []
-        print(len(nums))
-        for i in range(0,len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i] + nums[j] == target:
-                    print('append')
-                    ans.append(i)
-                    ans.append(j)
-                    return ans
+          #hashmaps
+        prevMap = {} #val:index
+        
+        for i , num in enumerate(nums):
+            diff = target - num #jo diff ha wo array me dhoond lo
+            if diff in prevMap: #jitna chal gia ha utna he dhoonday ga
+                return [prevMap[diff] , i]
+            prevMap[num] = i
+            
                     
+        
