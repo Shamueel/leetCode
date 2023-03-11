@@ -16,7 +16,8 @@ class Solution:
             else:
                 pmap[num]=i
         #print(pmap)
+        
         if 6 in pmap:
-            print("6 in here")
+            #print("6 in here")
             return False
         
